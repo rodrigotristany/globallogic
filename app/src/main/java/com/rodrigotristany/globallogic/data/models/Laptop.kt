@@ -4,15 +4,15 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class Laptop(
-    @SerializedName("geonames")
+    @SerializedName("title")
     @Expose
     val title: String,
 
-    @SerializedName("status")
+    @SerializedName("description")
     @Expose
     val description: String,
 
-    @SerializedName("status")
+    @SerializedName("image")
     @Expose
     val image: String
 )

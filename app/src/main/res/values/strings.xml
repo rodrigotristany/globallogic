@@ -2,6 +2,7 @@
     <string name="app_name">GlobalLogic</string>
     <string name="title_activity_laptops_list">Laptops</string>
     <string name="data_loaded_successfully">Data loaded successfully</string>
-    <string name="no_matching_data_from_server">La búsqueda no arrojó resultados</string>
+    <string name="no_matching_data_from_server">No se obtuvieron resultados</string>
     <string name="network_error">Revise su conexión a internet</string>
+    <string name="retry">Reintentar</string>
 </resources>

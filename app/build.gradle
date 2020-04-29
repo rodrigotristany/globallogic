@@ -33,30 +33,25 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation 'androidx.cardview:cardview:1.0.0'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
-
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-
+    implementation 'com.squareup.picasso:picasso:2.71828'
     testImplementation "org.powermock:powermock-module-junit4:$powermock_version"
     testImplementation "org.powermock:powermock-api-mockito2:$powermock_version"
     testImplementation "org.mockito:mockito-core:$mockito_version"
-
     implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version"
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
     implementation "com.google.dagger:dagger:$dagger2_vesion"
     kapt "com.google.dagger:dagger-compiler:$dagger2_vesion"
-
     implementation "com.google.code.gson:gson:$gson_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
-
     implementation "io.reactivex.rxjava2:rxjava:$rxjava2_version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$test_runner_version"
 }

@@ -14,15 +14,21 @@ class LaptopsListPresenter
     private val TAG : String = LaptopsListPresenter::javaClass.name
     private var view : LaptopsListMVP.View? = null
 
-    override fun laptops() {
+    override fun initLaptops() {
+        this.view?.hideRetry()
         this.view?.showLoader()
         getLaptopsUseCase.execute(object : DisposableObserver<List<Laptop>>(){
             override fun onComplete() {
-                TODO("Not yet implemented")
+                view?.hideLoader()
             }
 
-            override fun onNext(t: List<Laptop>) {
-                TODO("Not yet implemented")
+            override fun onNext(laptops: List<Laptop>) {
+                view?.hideLoader()
+                if(laptops.isEmpty()) {
+                    view?.showToast(context.getString(R.string.no_matching_data_from_server))
+                    view?.showRetry()
+                }
+                view?.showLaptopsList(laptops)
             }
 
             override fun onError(e: Throwable) {
@@ -32,8 +38,8 @@ class LaptopsListPresenter
                     else -> e.message
                 }
                 view?.showToast(message)
+                view?.showRetry()
             }
-
         })
     }
 
