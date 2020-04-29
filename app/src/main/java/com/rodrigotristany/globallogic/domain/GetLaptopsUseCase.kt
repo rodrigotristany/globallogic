@@ -10,7 +10,6 @@ import javax.inject.Inject
 class GetLaptopsUseCase
 @Inject constructor(private val laptopRepository: LaptopRepository,
                     subscribeScheduler: Scheduler,
-                    postExecutionScheduler: Scheduler
-) : UseCase<List<Laptop>, Unit>(subscribeScheduler, postExecutionScheduler) {
+                    postExecutionScheduler: Scheduler) : UseCase<List<Laptop>, Unit>(subscribeScheduler, postExecutionScheduler) {
     override fun buildUseCaseSingle(params: Unit?): Observable<List<Laptop>> = laptopRepository.laptops()
 }
