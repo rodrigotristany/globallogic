@@ -33,7 +33,7 @@ class LaptopsListAdapter(private val laptops: List<Laptop>, val listener: (Lapto
             Picasso.get()
                 .load(laptop.image)
                 .placeholder(R.drawable.ic_laptop_mac_black_48dp)
-                .error(R.drawable.ic_laptop_mac_black_48dp)
+                .error(R.drawable.ic_error_outline_black_48dp)
                 .into(laptopImage)
         }
     }

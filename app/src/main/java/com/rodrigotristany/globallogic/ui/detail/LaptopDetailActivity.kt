@@ -37,7 +37,7 @@ class LaptopDetailActivity : AppCompatActivity(), LaptopDetailMVP.View {
         Picasso.get()
             .load(laptop.image)
             .placeholder(R.drawable.ic_laptop_mac_black_48dp)
-            .error(R.drawable.ic_laptop_mac_black_48dp)
+            .error(R.drawable.ic_error_outline_black_48dp)
             .into(laptop_image)
     }
 
