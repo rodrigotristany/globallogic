@@ -11,7 +11,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_laptop_detail.*
 import java.lang.Exception
 
-class LaptopDetailActivity : AppCompatActivity(), LaptopDetailMVP.View {
+class LaptopDetailActivity : AppCompatActivity() {
 
     private lateinit var laptop: Laptop
 
@@ -41,7 +41,7 @@ class LaptopDetailActivity : AppCompatActivity(), LaptopDetailMVP.View {
             .into(laptop_image)
     }
 
-    override fun showToast(message: String?) {
+    private fun showToast(message: String?) {
         Toast.makeText(this, message?: "Error", Toast.LENGTH_LONG).show()
     }
 }
